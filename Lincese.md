@@ -1,0 +1,1 @@
+ [Proxecto de documentacion de domotica](https://github.com/Alejandropzzzz/domoticaluro)© 2024 by [Luis Castro Rodríguez](https://github.com/Alejandropzzzz) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1) 
