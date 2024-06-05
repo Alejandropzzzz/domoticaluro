@@ -1,0 +1,781 @@
+[
+    {
+        "id": "e895274a2cd253a9",
+        "type": "tab",
+        "label": "LUIS",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5c8b3243bea9a1fe",
+        "type": "mqtt out",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/actuadores/led14",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43c6d6fc24ad7b6d",
+        "x": 800,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6df3f8180cc87d76",
+        "type": "ui_switch",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "label": "LED14",
+        "tooltip": "",
+        "group": "46a07a740cadf472",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 430,
+        "y": 160,
+        "wires": [
+            [
+                "5c8b3243bea9a1fe"
+            ]
+        ]
+    },
+    {
+        "id": "97b576b0daefa02b",
+        "type": "inject",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "menxaseboton",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "3c28e34f53549f2f"
+            ]
+        ]
+    },
+    {
+        "id": "efd9c9308b820d64",
+        "type": "inject",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "mensaxeboton",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "385171532befc00b"
+            ]
+        ]
+    },
+    {
+        "id": "3c28e34f53549f2f",
+        "type": "mqtt out",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/actuadores/led14",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43c6d6fc24ad7b6d",
+        "x": 740,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "385171532befc00b",
+        "type": "mqtt out",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/actuadores/led14",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43c6d6fc24ad7b6d",
+        "x": 740,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "243709a73e04903c",
+        "type": "mqtt in",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/actuadores/led14",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43c6d6fc24ad7b6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 500,
+        "y": 380,
+        "wires": [
+            [
+                "31826b1089efc622"
+            ]
+        ]
+    },
+    {
+        "id": "c0ef69b4389b8e1f",
+        "type": "mqtt in",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/sensores/boton14",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43c6d6fc24ad7b6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 500,
+        "y": 460,
+        "wires": [
+            [
+                "b31333aaa16becd4"
+            ]
+        ]
+    },
+    {
+        "id": "31826b1089efc622",
+        "type": "debug",
+        "z": "e895274a2cd253a9",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b31333aaa16becd4",
+        "type": "debug",
+        "z": "e895274a2cd253a9",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8dd9650b33b3649f",
+        "type": "mqtt out",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/actuadores/led14",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43c6d6fc24ad7b6d",
+        "x": 740,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "62b4827b19f4a697",
+        "type": "ui_switch",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "label": "LED14",
+        "tooltip": "",
+        "group": "46a07a740cadf472",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 470,
+        "y": 560,
+        "wires": [
+            [
+                "8dd9650b33b3649f"
+            ]
+        ]
+    },
+    {
+        "id": "208d0c509add170a",
+        "type": "mqtt in",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/sensores/temperatura14",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43c6d6fc24ad7b6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 520,
+        "y": 920,
+        "wires": [
+            [
+                "109683d6091d457d",
+                "2986c4b04a96693a",
+                "09643691a20b01b3"
+            ]
+        ]
+    },
+    {
+        "id": "109683d6091d457d",
+        "type": "ui_gauge",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "group": "369eb1f56a12feaf",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "2986c4b04a96693a",
+        "type": "ui_chart",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "group": "369eb1f56a12feaf",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "label": "Gráfico Temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "35",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 820,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09643691a20b01b3",
+        "type": "debug",
+        "z": "e895274a2cd253a9",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "e75e3d6ee27d404d",
+        "type": "mqtt in",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/sensores/humidade14",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43c6d6fc24ad7b6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 520,
+        "y": 1080,
+        "wires": [
+            [
+                "f6befe46785edfc9",
+                "8276a96e1265f6a9"
+            ]
+        ]
+    },
+    {
+        "id": "f6befe46785edfc9",
+        "type": "ui_gauge",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "group": "369eb1f56a12feaf",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Humidade",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "8276a96e1265f6a9",
+        "type": "debug",
+        "z": "e895274a2cd253a9",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "f1b8c870d7bbe266",
+        "type": "mqtt in",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "depuracion14",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43c6d6fc24ad7b6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1050,
+        "y": 1040,
+        "wires": [
+            [
+                "65e2b9a10c68f197"
+            ]
+        ]
+    },
+    {
+        "id": "65e2b9a10c68f197",
+        "type": "debug",
+        "z": "e895274a2cd253a9",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "9b3f24427d5a25c4",
+        "type": "mqtt in",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/sensores/temperatura14",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43c6d6fc24ad7b6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 520,
+        "y": 1200,
+        "wires": [
+            [
+                "a3ee16261a5acad8"
+            ]
+        ]
+    },
+    {
+        "id": "a3ee16261a5acad8",
+        "type": "switch",
+        "z": "e895274a2cd253a9",
+        "name": "PasoTempTrue_False",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "21",
+                "vt": "str"
+            },
+            {
+                "t": "lt",
+                "v": "21",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 820,
+        "y": 1200,
+        "wires": [
+            [
+                "cf7a45d11cba4ddd"
+            ],
+            [
+                "e4f0702e35b7781b"
+            ]
+        ]
+    },
+    {
+        "id": "cf7a45d11cba4ddd",
+        "type": "change",
+        "z": "e895274a2cd253a9",
+        "name": "Cambio a True",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 1120,
+        "wires": [
+            [
+                "1126ce070cb83b34"
+            ]
+        ]
+    },
+    {
+        "id": "e4f0702e35b7781b",
+        "type": "change",
+        "z": "e895274a2cd253a9",
+        "name": "Cambio a False",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 1260,
+        "wires": [
+            [
+                "1126ce070cb83b34"
+            ]
+        ]
+    },
+    {
+        "id": "1126ce070cb83b34",
+        "type": "rbe",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1200,
+        "wires": [
+            [
+                "633bece3c7f01445",
+                "3a826c2da6e4325c"
+            ]
+        ]
+    },
+    {
+        "id": "633bece3c7f01445",
+        "type": "mqtt out",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/actuadores/rele14",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43c6d6fc24ad7b6d",
+        "x": 1450,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "3a826c2da6e4325c",
+        "type": "debug",
+        "z": "e895274a2cd253a9",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "fa59fd82e0a3c243",
+        "type": "mqtt out",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "topic": "casa/actuadores/rele14",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43c6d6fc24ad7b6d",
+        "x": 1350,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "5b225a124a0d37e1",
+        "type": "ui_switch",
+        "z": "e895274a2cd253a9",
+        "name": "",
+        "label": "rele14",
+        "tooltip": "",
+        "group": "46a07a740cadf472",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1030,
+        "y": 920,
+        "wires": [
+            [
+                "fa59fd82e0a3c243"
+            ]
+        ]
+    },
+    {
+        "id": "43c6d6fc24ad7b6d",
+        "type": "mqtt-broker",
+        "name": "mi_mosquitto_broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "46a07a740cadf472",
+        "type": "ui_group",
+        "name": "RGB",
+        "tab": "903fa3e2969e67a7",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "369eb1f56a12feaf",
+        "type": "ui_group",
+        "name": "TemperaturaHumidade",
+        "tab": "e3c7d76310c753e4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "903fa3e2969e67a7",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e3c7d76310c753e4",
+        "type": "ui_tab",
+        "name": "Practica4",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
