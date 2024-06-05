@@ -15,3 +15,6 @@ Este é o resumo do proxecto da casa domótica de TIC:
        - SSH: Utilizamos SSH para acceder ao servidor desde outros dispositivos.
        - VNC: Tamén podemos acceder mediante VNC.
    - Prácticas con Node-RED e Arduino: Realizamos prácticas con Node-RED e Arduino. Pronto subiremos algunhas capturas destas actividades.
+
+![P4_Luis Castro](https://github.com/Alejandropzzzz/domoticaluro/assets/171036256/0c5eda9e-59c3-4b7a-8fe6-9ca00679832d)
+fluxo_P4
